@@ -34,10 +34,10 @@ class _HomePageState extends State<HomePage> {
                 );
               }));
             },
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
         ],
-        title: Text('Weather App'),
+        title: const Text('Weather App'),
       ),
       body: weatherData == null
           ? Center(
@@ -71,29 +71,29 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Spacer(
+                    const Spacer(
                       flex: 3,
                     ),
                     Text(
                       Provider.of<WeatherProvider>(context).cityName!,
                       style:
-                          TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                          const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       // 'Update at : ${weatherData!.date.hour.toString()}:${weatherData!.date.minute.toString()}',
                       weatherData!.date,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 24,
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(weatherData!.getImage()),
                         Text(
                           weatherData!.temp.toInt().toString(),
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontSize: 32, fontWeight: FontWeight.bold),
                         ),
                         Column(
@@ -104,13 +104,13 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ],
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Text(
                       weatherData!.weatherStateName,
                       style:
-                          TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                          const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
                     ),
-                    Spacer(
+                    const Spacer(
                       flex: 5,
                     ),
                   ]),

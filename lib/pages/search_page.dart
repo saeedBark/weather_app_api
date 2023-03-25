@@ -15,7 +15,7 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('search a city'),
+        title: const Text('search a city'),
       ),
       body: Center(
         child: Padding(
@@ -31,7 +31,7 @@ class SearchPage extends StatelessWidget {
             },
             decoration: InputDecoration(
               contentPadding:
-                  EdgeInsets.symmetric(vertical: 35, horizontal: 24),
+                  const EdgeInsets.symmetric(vertical: 35, horizontal: 24),
               hintText: 'Enter a city',
               suffixIcon: GestureDetector(
                   onTap: () async {
@@ -46,9 +46,9 @@ class SearchPage extends StatelessWidget {
 
                     // Navigator.pop(context);
                   },
-                  child: Icon(Icons.search)),
-              border: OutlineInputBorder(),
-              label: Text('search'),
+                  child: const Icon(Icons.search)),
+              border: const OutlineInputBorder(),
+              label: const Text('search'),
             ),
           ),
         ),
